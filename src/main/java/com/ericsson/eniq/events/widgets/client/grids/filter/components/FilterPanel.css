@@ -1,0 +1,74 @@
+.container {
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.applyImage {
+	float: left;
+	margin-top: 3px;
+}
+
+.applyImage:HOVER {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.configureImage {
+	float: left;
+	margin-top: 3px;
+}
+
+.configureImage:HOVER {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.configureDisabled {
+	cursor: default !important;;
+	opacity: 0.3 !important;;
+}
+
+.applyImageDisabled {
+	cursor: default !important;;
+	opacity: 0.3 !important;;
+}
+
+.filterBox {
+	border: none;
+	height: 20px;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+	border-radius: 6px;
+	cursor: text;
+}
+
+.filterAppliedButton {
+	float: left;
+}
+
+.appliedFilterLabel {
+	font-family: Arial;
+	font-size: 12px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.filterIcon {
+	margin-top: 3px !Important;
+}
+.filterPopUp {
+    background-color:white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius:10px;
+    border: 1px solid white;
+    padding: 5px 0px;
+}
+.filterCell{
+	margin: 5px 8px !important;	
+}
+
+.invalidText {
+	color: red;
+}

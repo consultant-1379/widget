@@ -1,0 +1,5 @@
+//Add a toggle rail to the application...
+<p>              ToggleRail toggleRail = new ToggleRail("100%");
+<br>             toggleRail.add("IMSI");
+<br>             toggleRail.add("MSISDN");
+<br>             toggleRail.setValue("IMSI", true);

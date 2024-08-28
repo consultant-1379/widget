@@ -1,0 +1,87 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:h='urn:import:com.ericsson.eniq.events.widgets.client.grids.filter.configs'>
+
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.widgets.client.grids.filter.configs.SymbolsResourceBundle' />
+	<ui:style>
+		.container {
+			width: 300px;
+			height: 62px;
+			border-bottom: 1px solid #CCCCCC;
+		}
+		
+		.leftContainer {
+			width: 220px;
+			height: 62px;
+			float: left;
+			border-right: 1px solid #CCCCCC;
+		}
+		
+		.filterContainer {
+			margin: 20px;
+			border: 1px solid #CCCCCC;
+			border-radius: 5px;
+			background-color: white;
+		}
+		
+		.filterIcon {
+			float: left;
+		}
+		
+		.filterBox {
+			border: none;
+			height: 20px;
+			padding: 0px;
+			margin: 0px;
+			float: left;
+			border-radius: 6px;
+			cursor: text;
+		}
+		
+		.filterButton {
+			float: left;
+		}
+		
+		.applyButton {
+			margin-top: 3px;
+		}
+		
+		.filterAction {
+			float: left;
+			width: 79px;
+			height: 62px;
+		}
+		
+		.addFilter,.removeFilter {
+			margin: 24px 5px;
+			float: left;
+		}
+		
+		.addFilter:hover {
+			opacity: 0.7;
+		}
+		
+	</ui:style>
+	<g:FlowPanel ui:field="container" styleName="{style.container}">
+		<g:FlowPanel styleName="{style.leftContainer}">
+			<g:FlowPanel ui:field="filterContainer" styleName="{style.filterContainer}">
+				<g:FlowPanel ui:field="filterIcon" styleName="{style.filterIcon}"></g:FlowPanel>
+				<g:TextBox ui:field="editFilterTextBox" visible="false"
+					styleName="{style.filterBox}"></g:TextBox>
+				<h:CustomButton ui:field="filterBtn" visible="true"
+					addStyleNames="{style.filterButton}"></h:CustomButton>
+				<g:Image ui:field="applyButton" resource="{resourceBundle.applyNormal}"
+					styleName="{style.applyButton}"></g:Image>
+			</g:FlowPanel>
+		</g:FlowPanel>
+
+		<g:FlowPanel styleName="{style.filterAction}">
+			<g:Image ui:field="addFilter" resource="{resourceBundle.addFilter}"
+				styleName="{style.addFilter}"></g:Image>
+			<g:Image ui:field="removeFilter" resource="{resourceBundle.removeFilter}"
+				styleName="{style.removeFilter}"></g:Image>
+		</g:FlowPanel>
+	</g:FlowPanel>
+</ui:UiBinder>

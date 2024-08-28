@@ -1,0 +1,32 @@
+.thresholdWidget{
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #a3a3a3;
+    border-radius: 10px;
+    width: 78px; /*If this width is changed, you must also edit the title.left value*/
+}
+
+.rangeLine{
+    height: 1px;
+    position: absolute;
+    right: 17px;
+    width: 24px;
+}
+
+/*This is for the title of the widget.*/
+.title{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    left: 19px;
+    position: absolute;
+    top: 48px;
+    width: 100px;
+}
+
+.range{
+    font-size:10px;
+    position: absolute;
+    right: 45px;
+}

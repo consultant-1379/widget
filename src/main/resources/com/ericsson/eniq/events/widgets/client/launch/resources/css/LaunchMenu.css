@@ -1,0 +1,149 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2011 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+.container {
+	width: 275px;
+	position: absolute !important;
+	left: 0px;
+	top: 10%;
+	bottom: 150px;
+	z-index: 5000;
+	\-webkit-transition: literal('left 0.4s linear 0s');
+	\-moz-transition: literal('left 0.4s linear 0s');
+	\-o-transition: literal('left 0.4s linear 0s');
+	transition: left 1s linear 0s;
+	border: 1px solid #ffffff;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: #ffffff;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.65);
+	-webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.65);
+	overflow: visible;
+	outline: 0;
+	font-family: Arial;
+	font-size: 12px;
+	min-height: 500px;
+}
+
+.inner {
+	background-color: #ffffff;
+	position: absolute !important;
+    overflow: visible !important;
+	bottom: 22px;
+	top: 25px;
+	left: 0px;
+	right: 0px;
+}
+
+.header {
+	height: 24px;
+	background-color: #e3e3e3;
+	border-top-right-radius: 10px;
+	color: #333333;
+	line-height: 24px;
+	padding-left: 10px;
+	font-family: "Arial";
+    font-weight:bold;
+	font-size: 11px;
+	border-bottom: solid 1px white;
+	background-image: linear-gradient(top, rgb(227, 227, 227) 0%,
+		rgb(191, 191, 191) 100% );
+	background-image: literal('-o-linear-gradient(top, rgb(227, 227, 227) 0%, rgb(191, 191, 191) 100%)'
+		);
+	background-image: literal('-moz-linear-gradient(top, rgb(227, 227, 227) 0%, rgb(191, 191, 191) 100%)'
+		);
+	background-image: literal('-webkit-linear-gradient(top, rgb(227, 227, 227) 0%, rgb(191, 191, 191) 100%)'
+		);
+	background-image: literal('-ms-linear-gradient(top, rgb(227, 227, 227) 0%, rgb(191, 191, 191) 100%)'
+		);
+	background-image: literal('-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(227, 227, 227)), color-stop(1, rgb(191, 191, 191)))'
+		);
+}
+
+.resizer {
+	height: 100%;
+	width: 5px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: transparent;
+	cursor: e-resize;
+    outline: none;
+}
+
+.footer {
+	height: 21px;
+	bottom: 0px;
+	width: 100%;
+	position: absolute;
+	background-color: #e3e3e3;
+	background-image: linear-gradient(top, rgb(240, 240, 240) 0%,
+		rgb(255, 255, 255) 100% );
+	background-image: literal('-moz-linear-gradient(top, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 100%)'
+		);
+	background-image: literal('-webkit-linear-gradient(top, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 100%)'
+		);
+	background-image: literal('-ms-linear-gradient(top, rgb(240, 240, 240) 0%, rgb(255, 255, 255) 100%)'
+		);
+	border-bottom-right-radius: 10px;
+	border-top: 1px solid #cfcece;
+}
+
+.handle {
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	margin-left: 6px;
+	top: 52px;
+
+    -moz-box-shadow:
+    6px 0 7px -6px rgba(0, 0, 0, 0.3) inset,
+    6px 0 7px -6px transparent inset,
+    0 6px 7px -6px transparent inset,
+    0 -6px 0 -6px transparent inset;
+
+    box-shadow:
+        6px 0 7px -6px rgba(0, 0, 0, 0.3) inset,
+        6px 0 7px -6px transparent inset,
+        0 6px 7px -6px transparent inset,
+        0 -6px 0 -6px transparent inset;
+}
+
+.stackHeader {
+	background-color: #e8e8e8;
+	background-image: literal('linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+	background-image: literal('-moz-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+	background-image: literal('-webkit-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+	background-image: literal('-webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(253, 253, 253)), color-stop(1, rgb(232, 232, 232)))');
+	border: 1px solid #c5c6c7;
+	color: #333;
+	cursor: pointer;
+	font-weight: normal;
+    font-size:11px;
+    font-family: arial;
+	padding-top: 1px;
+	padding-left: 9px;
+	padding-bottom: 2px;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	white-space: nowrap;
+    padding-top:2px;
+    margin-bottom:1px;
+    height:16px;
+}
+
+@sprite  .icon {
+	gwt-image: "arrow_across";
+	position: absolute;
+	top: 5px;
+	right: 9px;
+}
+
+@sprite .open .icon {
+	gwt-image: "arrow_down";
+	right: 8px;
+}

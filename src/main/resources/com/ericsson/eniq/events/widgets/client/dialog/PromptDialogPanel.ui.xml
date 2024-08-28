@@ -1,0 +1,25 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:style src="dialog.css"/>
+
+    <g:VerticalPanel styleName="{style.panelAlign}">
+        <g:HorizontalPanel styleName="{style.bodyPanel}">
+            <g:HorizontalPanel>
+                <g:Image ui:field="icon" styleName="{style.imageIcon}"/>
+                <g:VerticalPanel>
+                    <g:Label ui:field="titleLabel" styleName="{style.label}" addStyleNames="{style.heading}"/>
+                    <g:HTML ui:field="messageLabel" styleName="{style.label}"/>
+                </g:VerticalPanel>
+            </g:HorizontalPanel>
+
+        </g:HorizontalPanel>
+        <g:cell horizontalAlignment="center">
+            <g:HorizontalPanel>
+                <g:Button ui:field="okButton" addStyleNames="{style.button}"/>
+                <g:Button ui:field="cancelButton" addStyleNames="{style.button}"/>
+            </g:HorizontalPanel>
+        </g:cell>
+    </g:VerticalPanel>
+
+</ui:UiBinder>

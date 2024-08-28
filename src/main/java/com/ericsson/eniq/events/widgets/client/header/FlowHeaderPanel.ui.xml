@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.titleWrapper {
+			font-family: Arial, sans-serif;
+			font-size: 12px;
+			margin-top: 1px;
+			position: relative;
+		}
+		
+		.header {
+			background-color: #e8e8e8;
+			background-image: literal('linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+			background-image: literal('-moz-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+			background-image: literal('-webkit-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+			background-image: literal('-webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(253, 253, 253)), color-stop(1, rgb(232, 232, 232)))');
+			border: 1px solid #c5c6c7;
+			color: #333;
+			font-weight: normal;
+			padding-top: 1px;
+			padding-left: 9px;
+			padding-bottom: 2px;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: -moz-none;
+			white-space: nowrap;
+			cursor: default;
+		}
+		.subtitle{
+			color: #0A7977;
+		}
+	</ui:style>
+	<g:FlowPanel styleName="{style.titleWrapper}">
+		<g:HTMLPanel styleName="{style.header}" ui:field="headerWrapper">
+			<span ui:field="header" />
+			<span ui:field="subtitle" class='{style.subtitle}'/>
+		</g:HTMLPanel>
+		<g:FlowPanel ui:field="body" />
+	</g:FlowPanel>
+
+</ui:UiBinder>

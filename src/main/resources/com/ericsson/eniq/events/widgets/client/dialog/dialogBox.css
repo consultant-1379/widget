@@ -1,0 +1,16 @@
+.dialogBox{
+    z-index: 20000; /*must be above 10000  */
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Mozilla */
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Safari and Chrome */
+    border-radius: 10px;
+    padding: 1px;
+}
+
+/*For drill dialogs - we need it to stand out more against charts with plain white backgrounds*/
+/*Have added this style */
+.includeBorder {
+   border-top: 1px solid #C5C6C7;
+}

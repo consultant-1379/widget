@@ -1,0 +1,49 @@
+//Add a GWTGrid to the application...
+<p>              GWTGrid<DataItem> table = new GWTGrid<DataItem>();
+<br>             table.setPageSize(ROW_COUNT);
+<br>             table.setTableLayoutFixed(true);
+<br><br>         // Push the data into the widget.
+<br>        	 table.setDataList(GridDataHelper.generateData(ROW_COUNT));
+<br><br>         // Adding column to grid.
+<br>        	 final List<ColumnInfo> columnInfos = GridDataHelper.getColumnInfos();
+<br>        	 for (final ColumnInfo columnInfo : columnInfos) {
+<br>        	 	table.addColumn(columnInfo);
+<br>        	 }
+<br>        	 table.setTableWidth(700);
+<br>        	 table.setTableHeight(300);
+<br><br>         // column configuration.
+<br>        	 final List<ColumnInfo> columnInfos = new ArrayList<ColumnInfo>();
+<br>        	 final ColumnInfo e1 = new ColumnInfo(STRING_COLUMN, ColumnType.STRING, "String Column");
+<br>        	 e1.setHidden(false);
+<br>        	 e1.setToolTip("String Column");
+<br>        	 e1.setFilterEnabled(true);
+<br>        	 e1.setWidth(150);
+<br>        	 e1.setSortingEnabled(true);
+<br>        	 columnInfos.add(e1);
+<br>        	 final ColumnInfo e2 = new ColumnInfo(DOUBLE_COLUMN, ColumnType.DOUBLE, "Double Column");
+<br>        	 e2.setFilterEnabled(true);
+<br>        	 e2.setSortingEnabled(true);
+<br>        	 e2.setToolTip("Double Column");
+<br>        	 e2.setFormat("##.###");
+<br>        	 e2.setWidth(250);
+<br>        	 columnInfos.add(e2);
+<br>        	 final ColumnInfo e3 = new ColumnInfo(DATE_COLUMN, ColumnType.DATE, "Date Column");
+<br>        	 e3.setFilterEnabled(true);
+<br>        	 e3.setSortingEnabled(true);
+<br>        	 e3.setToolTip("Date Column");
+<br>        	 e3.setFormat("dd/MM/yy HH:mm");
+<br>        	 e3.setWidth(250);
+<br>        	 columnInfos.add(e3);
+<br>        	 final ColumnInfo e4 = new ColumnInfo(BOOLEAN_COLUMN, ColumnType.BOOLEAN, "Boolean Column");
+<br>        	 e4.setToolTip("Boolean Column");
+<br>        	 e4.setFilterEnabled(true);
+<br>        	 e4.setSortingEnabled(true);
+<br>        	 e4.setWidth(150);
+<br>        	 columnInfos.add(e4);
+<br>        	 final ColumnInfo e5 = new ColumnInfo(INTEGER_COLUMN, ColumnType.INTEGER, "Integer Column");
+<br>        	 e5.setFilterEnabled(true);
+<br>        	 e5.setToolTip("Integer Column");
+<br>        	 e5.setSortingEnabled(true);
+<br>        	 e5.setWidth(150);
+<br>        	 columnInfos.add(e5);
+<br>        	 return columnInfos;

@@ -1,0 +1,53 @@
+.item {
+	cursor: pointer;
+	font-family: Arial, serif;
+	font-size: 12px;
+	margin: 2px 1px;
+	padding: 2px 20px 3px 11px;
+	outline: 0;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.marked {
+	background-color: #eff;
+}
+
+.item:hover {
+	background-color: #d5f1fe;
+}
+
+.selected {
+	background-color: #badeee;
+}
+
+.seperatorLabel { /* background-color: #E0E0E0; */
+	color: #333333;
+	cursor: default;
+	display: block;
+	font-family: tahoma, arial, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	height: 15px;
+	margin-left: 15px;
+	overflow: hidden;
+	padding: 0 2px;
+	position: relative;
+	white-space: nowrap;
+	background-color: #ffffff;
+	float: left;
+}
+
+.seperatorItem {
+	height: 15px;
+	line-height: 7px;
+	margin: 2px 3px;
+}
+
+.separatorLine {
+	background-color: #E3E3E3;
+	height: 2px;
+	position: relative;
+	top: 5px;
+	width: 100%;
+}

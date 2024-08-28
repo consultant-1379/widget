@@ -1,0 +1,64 @@
+.toggleMini{
+    width: 6px;
+    height: 6px;
+    border-color: #333333;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.toggleMini:focus{
+    border-color: #00A9D4;
+    -moz-box-shadow: inset 0 0 0 1px #00A9D4;
+    -webkit-box-shadow: inset 0 0 0 1px #00A9D4;
+    box-shadow: inset 0 0 0 1px #00A9D4;
+}
+
+.toggleMiniOff:focus,
+.toggleMiniOn:focus{
+    outline: 0px;
+    border-color: #00A9D4;
+    -moz-box-shadow: inset 0 0 0 1px #00A9D4;
+    -webkit-box-shadow: inset 0 0 0 1px #00A9D4;
+    box-shadow: inset 0 0 0 1px #00A9D4;
+}
+
+.toggleMiniOffDisabled{
+    border-color: #808080;
+     background-image: -moz-linear-gradient(top,  rgba(0,0,0,0.20) 0%, rgba(0,0,0,0) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.20)), color-stop(100%,rgba(0,0,0,0)));
+    background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0.20) 0%,rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(top,  rgba(0,0,0,0.20) 0%,rgba(0,0,0,0) 100%);
+    background-image: -ms-linear-gradient(top,  rgba(0,0,0,0.20) 0%,rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(top,  rgba(0,0,0,0.20) 0%,rgba(0,0,0,0) 100%);
+    cursor: default;
+}
+
+.toggleMiniOnDisabled{
+    border-color: #808080;
+    cursor: default;
+}
+
+.toggleMiniOn{
+     border-color: #333333;
+}
+
+.toggleMiniOff{
+    border-color: #808080;
+    background-image: -moz-linear-gradient(top,  rgba(0,0,0,0.30) 0%, rgba(0,0,0,0) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.30)), color-stop(100%,rgba(0,0,0,0)));
+    background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(top,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%);
+    background-image: -ms-linear-gradient(top,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(top,  rgba(0,0,0,0.30) 0%,rgba(0,0,0,0) 100%);
+    cursor: pointer;
+}
+
+.toggleMiniOn:hover{
+    background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%);
+    background-image: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.45)));
+    background-image: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+    background-image: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+    background-image: linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.45) 100%);
+    cursor: pointer;
+}

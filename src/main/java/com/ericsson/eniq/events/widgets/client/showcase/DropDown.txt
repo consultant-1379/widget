@@ -1,0 +1,27 @@
+//Create a List with the values you wish to include  </br>
+final List<StringDropDownItem> menuValues = prepareDropDownList(); </br>
+
+            VerticalPanel holderPanel = new VerticalPanel(); </br>
+            //Create the DropDown Menu   </br>
+            final DropDownMenu dropDownMenu = new DropDownMenu();   </br>
+            dropDownMenu.setWidth("190px"); </br>
+            dropDownMenu.update(menuValues); //Add the List to the DropDown Menu </br>
+            dropDownMenu.setValue(new StringDropDownItem("Value 2"));   //To set the default value </br>
+            dropDownMenu.getElement().getStyle().setMarginBottom(10, Unit.PX); </br>
+            holderPanel.add(dropDownMenu); </br>
+            <p>
+            final DropDown<StringDropDownItem> testDropdown = new DropDown<StringDropDownItem>();      </br>
+            testDropdown.update(menuValues);                                              </br>
+            testDropdown.getElement().getStyle().setMarginBottom(10, Unit.PX);           </br>
+            <p>
+            //How to add a disable button </br>
+            final Button enable = new Button("Enable/Disable");                     </br>
+            enable.addClickHandler(new ClickHandler() {                          </br>
+                @Override                                                      </br>
+                public void onClick(ClickEvent event) {                       </br>
+                   testDropdown.setEnabled(enabled);                          </br>
+                    enabled=!enabled;} });                                 </br>
+            <p>
+            holderPanel.add(testDropdown);   </br>
+            testDropdown.setEnabled(enabled);   </br>
+            holderPanel.add(enable);          </br>

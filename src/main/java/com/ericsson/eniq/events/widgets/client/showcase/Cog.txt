@@ -1,0 +1,5 @@
+//To create a Cog Wheel Button, use this code:</br>
+final CogButton cogButton = new CogButton();<br>
+<p>
+//For UI Binding use:</br>
+<< b:CogButton ui:field="kpiCogWheel" >> << /b:CogButton >>

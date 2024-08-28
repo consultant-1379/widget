@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.headerStyle {
+			font-weight: bold;
+		}
+		
+		.marginStyle {
+			margin-left: 10px;
+			margin-right: 5px;
+		}
+		
+		.filterPopUp {
+			background-color: white;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+			border-radius: 10px;
+			border: 1px solid white;
+			padding: 5px 0px;
+		}
+	</ui:style>
+	<ui:with
+		type="com.ericsson.eniq.events.widgets.client.grids.filter.components.FilterResourceBundle"
+		field="resourceBundle"></ui:with>
+	<g:PopupPanel ui:field="detailPopUp" addStyleNames="{style.filterPopUp}">
+		<g:HorizontalPanel>
+			<g:Image resource="{resourceBundle.infoIcon}" styleName="{style.marginStyle}" />
+			<g:VerticalPanel styleName="{style.marginStyle}">
+				<g:Label ui:field="headerText" styleName="{style.headerStyle}" />
+				<g:FlowPanel ui:field="filtersContainer"></g:FlowPanel>
+			</g:VerticalPanel>
+		</g:HorizontalPanel>
+	</g:PopupPanel>
+</ui:UiBinder>

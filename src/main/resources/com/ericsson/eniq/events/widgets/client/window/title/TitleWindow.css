@@ -1,0 +1,139 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2011 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+/*
+ * No need to remove this css file and combine with others as it is already injected
+ * in javascript by using CSSResource posibilities
+ *
+ * The literal() stuff below is because GWT's CSS validator does not like values beginning with "-".
+ * Likewise these characters are escaped with a "\" elsewhere...
+ */
+@external .dragdrop-selected;
+@external .dragdrop-dragging;
+@external .dragdrop-proxy;
+.outer {
+	width: 100%;
+}
+
+.inner {
+	padding: 5px;
+}
+
+.portlet {
+	border: 1px solid #a3a3a3;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0px 2px 4px 0px #a6a6a6;
+	height: 100%;
+}
+
+table.topContainerNotDraggable,
+table.topMapContainer,
+table.topContainer {
+	background-color: #fff;
+	border-bottom: 1px solid #fff;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	table-layout: fixed;
+	width: 100%;
+    padding-left:5px;
+}
+
+table.topContainer:hover,
+table.topContainer:active,
+table.topMapContainer:hover,
+table.topMapContainer:active {
+	background-color: #f5f5f5;
+	border-bottom-color: #a3a3a3;
+}
+
+table.noButton>tbody>tr>td:first-child {
+	display: none;
+}
+
+.dragHandle {
+	outline: none;
+	cursor: move;
+}
+
+.title {
+	border-bottom: none;
+	color: #333333;
+	font-size: 12px;
+	height: 15px;
+	padding: 4px 4px 2px 6px;
+	/* To avoid title breaking in multiple lines */
+	white-space: nowrap;
+	overflow: hidden;
+    font-family:arial;
+}
+
+/*
+* Note the "\" escape character.
+*/
+.bodyContainer {
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	overflow: hidden;
+}
+
+.closeButtonContainer {
+	margin-top: 3px;
+}
+
+.closeButtonContainer>img {
+	cursor: pointer;
+}
+
+.addButton {
+	display: none;
+}
+
+/* Specific style for placeholder widget */
+.placeHolder .portlet {
+	border: 1px solid #a5a5a5;
+	background-color: #efefef;
+	box-shadow: inset 0px 0px 6px -1px RGBA(0, 0, 0, 0.9);
+}
+
+.placeHolder .dragHandle {
+	cursor: auto;
+}
+
+.placeHolder .topContainer {
+	visibility: hidden;
+}
+
+.placeHolder .bodyContainer {
+	background-color: transparent;
+}
+
+@sprite .placeHolder .addButton {
+	gwt-image: "add";
+	display: block;
+	cursor: pointer;
+	margin: 0 auto;
+	height: 64px;
+	width: 64px;
+}
+
+@sprite .placeHolder .addButton:hover {
+	gwt-image: "addHover";
+}
+
+@sprite .placeHolder .addButton:active {
+	gwt-image: "addClick";
+}
+
+.placeHolder .closeButtonContainer {
+	opacity: 0.4;
+}
+
+/* Styles for portlet when it is dragged */
+.dragdrop-selected table.topContainer,.dragdrop-dragging table.topContainer,.dragdrop-proxy table.topContainer
+	{
+	background-color: #ebebeb;
+	border-bottom-color: #a3a3a3;
+}

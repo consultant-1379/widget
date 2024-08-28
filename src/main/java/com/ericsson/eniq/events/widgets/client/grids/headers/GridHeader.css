@@ -1,0 +1,18 @@
+.sortImage {
+	height: 20px !important;
+	width: auto !important;
+}
+
+@sprite .sortImageAsc {
+	gwt-image: 'sortAsc';
+	font-weight: bold;
+	padding-left: 15px;
+	background-position: 0px 7px;
+}
+
+@sprite .sortImageDesc {
+	gwt-image: 'sortDesc';
+	font-weight: bold;
+	padding-left: 15px;
+	background-position: 0px 7px;
+}

@@ -1,0 +1,18 @@
+//Possible dialog types are:<br>
+//MessageDialog.DialogType.ERROR<br>
+//MessageDialog.DialogType.INFO<br>
+//MessageDialog.DialogType.WARNING
+<p>
+
+<br>//create the dialog...
+<br>final MessageDialog messageDialog = new MessageDialog();
+
+<br>//create a button (just for testing)...
+<br>final Button errorButton = new Button("Show Error message");
+<br>    errorButton.addClickHandler(new ClickHandler() {
+<br>    @Override
+<br>                 public void onClick(final ClickEvent event) {
+<br>                     messageDialog.show("Title", "This is the content",
+<br>                             MessageDialog.DialogType.WARNING);
+<br>                 }
+<br>             });

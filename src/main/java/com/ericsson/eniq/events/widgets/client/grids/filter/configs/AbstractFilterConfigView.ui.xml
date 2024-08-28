@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:d="urn:import:com.ericsson.eniq.events.widgets.client.dropdown"
+	xmlns:e='urn:import:com.ericsson.eniq.events.widgets.client.button'>
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.widgets.client.grids.filter.configs.FilterConfigResourceBundle' />
+
+	<g:FlowPanel ui:field="container">
+		<!-- <g:HorizontalPanel ui:field="headerPanel" styleName="{resourceBundle.style.windowTitle}">
+			<g:cell width="20px" horizontalAlignment="left"
+				verticalAlignment="middle">
+				<g:Image ui:field="headerIcon" resource="{resourceBundle.configureNormal}" />
+			</g:cell>
+			<g:cell horizontalAlignment="left">
+				<g:Label ui:field="windowTitle" styleName="{resourceBundle.style.headerLabel}"
+					text="Advance Filter Configuration" />
+			</g:cell>
+			<g:cell width="16px" verticalAlignment="top">
+				<e:ImageButton ui:field="closeButton" imageResource="{resourceBundle.closeNormal}" />
+			</g:cell>
+		</g:HorizontalPanel> -->
+		<g:FlowPanel styleName="{resourceBundle.style.body}">
+			<g:FlowPanel addStyleNames="{resourceBundle.style.headerImages}">
+					<e:ImageButton ui:field="closeButton" imageResource="{resourceBundle.closeNormal}" addStyleNames="{resourceBundle.style.closeButton}"/>
+					<e:ImageButton imageResource="{resourceBundle.configureNormal}" addStyleNames="{resourceBundle.style.configureImage}"/>
+			</g:FlowPanel>
+			<d:DropDownMenu ui:field="categoryDropDown"
+				addStyleNames="{resourceBundle.style.categoryDropDown}" visible="false" />
+			<g:FlowPanel styleName="{resourceBundle.style.headerContainer}">
+				<g:Label ui:field="headerLabel" styleName="{resourceBundle.style.headerLabel}"></g:Label>
+			</g:FlowPanel>
+			<g:FlowPanel ui:field="filterContainer"
+				styleName="{resourceBundle.style.filterContainer}" />
+			<g:HorizontalPanel styleName="{resourceBundle.style.buttonBar}">
+				<g:Button ui:field="applyButton" text="Apply"
+					addStyleNames="{resourceBundle.style.button}" />
+				<g:Button ui:field="cancelButton" text="Cancel"
+					addStyleNames="{resourceBundle.style.button}" />
+			</g:HorizontalPanel>
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{resourceBundle.style.footer}">
+		</g:FlowPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder>

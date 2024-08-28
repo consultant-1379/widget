@@ -1,0 +1,5 @@
+// This will create Calendar</br>
+CalendarPopUp calendarPopup = new CalendarPopUp();  </br>
+calendarPopup.show();
+calendarPopup.setMaxNumberDaysRange(7);
+

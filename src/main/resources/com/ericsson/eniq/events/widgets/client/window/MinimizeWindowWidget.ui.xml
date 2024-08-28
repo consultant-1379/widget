@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:e='urn:import:com.ericsson.eniq.events.widgets.client.button'>
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.widgets.client.WidgetsResourceBundle' />
+	<ui:style>
+		@eval headerHeight com.ericsson.eniq.events.widgets.client.window.FloatingWindow.getHeaderHeight();
+		.container {
+			border: 1px solid #9A9999;
+			border-radius: 5px;
+			background-image: linear-gradient(top, #ECECEC, #A3A3A2);
+			background-image: -moz-linear-gradient(top, #ECECEC, #A3A3A2);
+			background-image: -webkit-linear-gradient(top, #ECECEC, #A3A3A2);
+			background-image: -webkit-gradient(linear, top, bottom, from(#ECECEC),
+				to(#A3A3A2) );
+			table-layout: fixed;
+			line-height: headerHeight;
+			position: absolute;
+			bottom: 0;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		
+		.headerLabel {
+			font-size: 11px;
+			font-family: "Arial";
+			color: #333333;
+			font-weight: bold;
+		}
+		
+		.handle {
+			overflow: hidden;
+			height: headerHeight;
+			outline: 0;
+		}
+	</ui:style>
+	<g:HorizontalPanel styleName="{style.container}">
+		<g:cell width="20px" horizontalAlignment="left"
+			verticalAlignment="middle">
+			<g:Image ui:field="headerIcon" visible="false" />
+		</g:cell>
+		<g:cell horizontalAlignment="left">
+			<g:FocusPanel ui:field="handle" styleName="{style.handle}">
+				<g:Label ui:field="windowTitle" styleName="{style.headerLabel}" />
+			</g:FocusPanel>
+		</g:cell>
+		<g:cell width="17px" verticalAlignment="middle">
+			<e:ImageButton ui:field="maximizeRestoreButton"
+				imageResource="{resourceBundle.restoreButton}" />
+		</g:cell>
+		<g:cell width="16px" verticalAlignment="top">
+			<e:ImageButton ui:field="closeIcon" imageResource="{resourceBundle.closeIcon}" />
+		</g:cell>
+	</g:HorizontalPanel>
+</ui:UiBinder>

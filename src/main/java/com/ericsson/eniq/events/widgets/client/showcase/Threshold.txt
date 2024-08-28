@@ -1,0 +1,19 @@
+// How to create a Threshold Widget           </Br>
+   final ThresholdWidget thresholdWidget = new ThresholdWidget(4, "title");             </Br>
+        thresholdWidget.setHeight("125px");                                             </Br>
+        thresholdWidget.getElement().getStyle().setPosition(Style.Position.RELATIVE);   </Br>
+                                                                                        </Br>
+eventbus.addHandler(ThresholdWidgetChangeEvent.TYPE, new IThresholdWidgetChange() {     </Br>
+                @Override                                                               </Br>
+                public void handleThresholdWidgetChange(final IThreshold threshold) {   </Br>
+                    final MessageDialog messageDialog = new MessageDialog();            </Br>
+                    final List<IThresholdItem> items = threshold.getThresholdItems();   </Br>
+                    String message = "\n";                                              </Br>
+                    for (final IThresholdItem item : items) {                           </Br>
+                        message = message + item.getColor() + " is enabled: " + item.isEnabled() + ", max = "    </Br>
+                                + item.getMax() + ", min = " + item.getMin() + "\n"; }            </Br>
+                    messageDialog.show("Success", "Got a event from the Threshold Widget:" + message,    </Br>
+                            MessageDialog.DialogType.INFO); } });     </Br>
+            //Creating the Widget  </Br>
+            final ThresholdWidget thresholdWidget = new ThresholdWidget(4, "title");        </br>
+            thresholdWidget.getElement().getStyle().setPosition(Style.Position.RELATIVE);   </br>

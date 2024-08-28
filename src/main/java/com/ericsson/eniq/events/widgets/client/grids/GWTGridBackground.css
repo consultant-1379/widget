@@ -1,0 +1,4 @@
+@sprite .gridStripeBackground {
+    gwt-image: "gridBackgroundStripe";
+    background-repeat: repeat;
+}

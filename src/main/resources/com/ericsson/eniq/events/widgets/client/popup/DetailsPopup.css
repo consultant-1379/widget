@@ -1,0 +1,48 @@
+.gwtPopupPanel{
+    border: 0;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+.header{
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #C7C7C7;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    height: 24px;
+    overflow: hidden;
+    padding-top: 0;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.titleLabel {
+    float: left;
+    overflow: hidden;
+    padding-top: 5px;
+}
+
+.iconHolder{
+    height: 24px;
+    width: 30px;
+    float: left;
+    overflow: hidden;
+}
+
+.contents{
+    padding: 5px 2px 2px;
+}
+
+.contents td{
+    font-family: arial;
+    font-size: 11px;
+    color: black;
+}
+
+.contents td:first-child{
+    font-weight: bold;
+}

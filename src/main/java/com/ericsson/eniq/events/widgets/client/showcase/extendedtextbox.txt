@@ -1,0 +1,4 @@
+//Add a textBox to the application...
+<p>ExtendedTextBox extendedTextBox = new ExtendedTextBox();
+<br>extendedTextBox.setWidth("100%");
+<br>extendedTextBox.setDefaultText("This is the default text.");

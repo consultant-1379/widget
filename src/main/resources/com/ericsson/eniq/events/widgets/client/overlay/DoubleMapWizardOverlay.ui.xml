@@ -1,0 +1,51 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:form='urn:import:com.ericsson.eniq.events.widgets.client.overlay.form'>
+
+    <ui:style
+            type="com.ericsson.eniq.events.widgets.client.overlay.DoubleMapWizardOverlay.DoubleMapWizardOverlayStyle"
+            field="style">
+
+        /* TODO: Move background images to resource bundle for wizard overlay */
+        .wrapper {
+            font-family: Arial;
+            font-size: 12px;
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            background-color: #fff;
+
+            border: 1px solid #DADADA;
+            border-top: 0;
+
+            padding-top: 15px;
+
+            /* Just to make overlay on top of the chart */
+            position: relative;
+            z-index: 1;
+        }
+
+        .buttonsPanel {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .buttonsPanel > button {
+            margin: 0 auto;
+            width: 70px;
+        }
+    </ui:style>
+
+    <form:WizardFormContainer styleName="{style.wrapper}">
+        <g:FlowPanel ui:field="content" styleName="{style.content}">
+            <g:SimplePanel ui:field="overlayPanelContainer"/>
+            <g:SimplePanel ui:field="buttonsPanel" styleName="{style.buttonsPanel}">
+                <g:Button ui:field="launchButton" text="Launch"/>
+            </g:SimplePanel>
+        </g:FlowPanel>
+    </form:WizardFormContainer>
+
+</ui:UiBinder>

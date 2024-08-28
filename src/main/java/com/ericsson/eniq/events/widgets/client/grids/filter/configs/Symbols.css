@@ -1,0 +1,41 @@
+@sprite .greaterThanEqualNormal {
+	gwt-image: 'greaterThanEqualNormal';
+	float: left;
+	margin: 0px 3px;
+}
+
+@sprite .greaterThanNormal {
+	gwt-image: 'greaterThanNormal';
+	float: left;
+	margin: 0px 3px;
+}
+
+@sprite .lessThanEqualNormal {
+	gwt-image: 'lessThanEqualNormal';
+	float: left;
+	margin: 0px 3px;
+}
+
+@sprite .lessThanNormal {
+	gwt-image: 'lessThanNormal';
+	float: left;
+	margin: 0px 3px;
+}
+
+@sprite .equalsNormal {
+	gwt-image: 'equalsNormal';
+	float: left;
+	margin: 0px 3px;
+}
+
+.equalsNormal:HOVER,.greaterThanEqualNormal:HOVER,.greaterThanNormal:HOVER,.lessThanEqualNormal:HOVER,.lessThanNormal:HOVER,.enableRemoveFilter:HOVER {
+	opacity: 0.7;
+}
+
+.disableRemoveFilter {
+	opacity: 0.3;
+}
+
+.enableRemoveFilter {
+	opacity: 1.0;
+}

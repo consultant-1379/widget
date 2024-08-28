@@ -1,0 +1,8 @@
+//Add a SuggestBox to the application...
+<br>//This is used in Live loads
+
+<p>MultiWordSuggestOracle multiWordSuggestOracle = new  MultiWordSuggestOracle();
+<br>multiWordSuggestOracle.add("suggestion1");
+<br>multiWordSuggestOracle.add("suggestion2");
+
+<p>ExtendedSuggestBox extendedSuggestBox = new ExtendedSuggestBox(multiWordSuggestOracle);

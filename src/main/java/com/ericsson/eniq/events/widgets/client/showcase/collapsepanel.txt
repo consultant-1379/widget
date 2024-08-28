@@ -1,0 +1,4 @@
+CollapsePanel collapsePanel = new CollapsePanel();</br>
+collapsePanel.setWidth("300px");</br>
+collapsePanel.setText("Simple collapse panel, click on header");</br>
+collapsePanel.setContent(new Label("Just some content, can be any widget in fact"));

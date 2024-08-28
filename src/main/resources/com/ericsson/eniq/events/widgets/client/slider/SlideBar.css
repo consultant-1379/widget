@@ -1,0 +1,43 @@
+.slidingThumb {
+	float: left;
+	margin-top: 10px;
+    position: relative;
+}
+
+.slidingThumb:focus {
+	border-color: #00A9D4;
+	-moz-box-shadow: inset 0 0 0 1px #00A9D4;
+	-webkit-box-shadow: inset 0 0 0 1px #00A9D4;
+	box-shadow: inset 0 0 0 1px #00A9D4;
+}
+
+.coloredBar {
+	float: left;
+}
+
+@sprite .slidingThumb:before {
+	content: "";
+	position: absolute;
+	top: 9px;
+	width: 15px;
+	margin-left: -7px;
+	gwt-image: 'slidingThumbNormal';
+	background-color: transparent;
+	height: 20px;
+}
+
+.slidingThumb:after {
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background-color: transparent;
+	top: 34px;
+	margin-left: -5px;
+	background-color: inherit;
+	border: 1px solid black;
+}
+
+.slideGroup {
+	margin-left: 5px;
+}

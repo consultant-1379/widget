@@ -1,0 +1,97 @@
+@def innerTrackWidth 14px;
+@def vArrowHeight 13px;
+@def vArrowWidth 14px;
+.vScroller {
+	border-radius: 6px;
+	\-moz-border-radius: 6px;
+	\-webkit-border-radius: 6px;
+	background-color: #e3e2e2; /*fallback   */
+	background-image: literal('linear-gradient(top, #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-moz-linear-gradient(center top , #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-webkit-linear-gradient(top, #F3F3F3 0%, #C9C9C9 100%)');
+	border: 1px solid #afafaf !important;
+	position: relative;
+}
+
+.vScroller:hover {
+	background-color: #e3e2e2; /*fallback   */
+	background-image: literal('linear-gradient(top, #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-moz-linear-gradient(center top , #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-webkit-linear-gradient(top, #F3F3F3 0%, #C9C9C9 100%)');
+	border: 1px solid #cdcdcd !important;
+}
+
+.hScroller {
+	border-radius: 6px;
+	\-moz-border-radius: 6px;
+	\-webkit-border-radius: 6px;
+	background-color: #e3e2e2; /*fallback   */
+	background-image: literal('linear-gradient(left, #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-moz-linear-gradient(center left , #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-webkit-linear-gradient(left, #F3F3F3 0%, #C9C9C9 100%)');
+	border: 1px solid #afafaf !important;
+	position: relative;
+}
+
+.hScroller:hover {
+	background-color: #e3e2e2; /*fallback   */
+	background-image: literal('linear-gradient(left, #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-moz-linear-gradient(center left , #F3F3F3 0%, #C9C9C9 100%)');
+	background-image: literal('-webkit-linear-gradient(left, #F3F3F3 0%, #C9C9C9 100%)');
+	border: 1px solid #cdcdcd !important;
+}
+
+.verticalScrollBar {
+	-moz-box-shadow: 3px 0 7px #DBDBDB inset;
+	-webkit-box-shadow: 3px 0 7px #DBDBDB inset;
+	box-shadow: 3px 0 7px #DBDBDB inset;
+}
+
+.horizontalScrollBar {
+	-moz-box-shadow: 0 3px 7px #DBDBDB inset;
+	-webkit-box-shadow: 0 3px 7px #DBDBDB inset;
+	box-shadow: 0 3px 7px #DBDBDB inset;
+}
+
+.horizontalScrollBar,.verticalScrollBar {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #E7E8E8;
+    background-color:white;
+}
+
+.verticalScrollTrack,.horizontalScrollTrack {
+	position: relative;
+	background: transparent;
+}
+
+.verticalScrollTrack {
+	width: innerTrackWidth;
+}
+
+.scrollPanel {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.horizontalScrollTrack {
+	height: innerTrackWidth;
+}
+
+.downArrow {
+}
+
+.upArrow {
+}
+
+.rightArrow {
+}
+
+.leftArrow {
+}
+
+.corner {
+	background-color: #f3f3f3;
+}

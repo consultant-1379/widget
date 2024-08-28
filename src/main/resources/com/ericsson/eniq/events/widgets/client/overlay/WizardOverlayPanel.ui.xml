@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:c="urn:import:com.ericsson.eniq.events.widgets.client.checkable">
+
+    <ui:style field="style"
+              type="com.ericsson.eniq.events.widgets.client.overlay.WizardOverlayPanel.PanelStyle">
+        .wrapper {
+        }
+
+         .content{
+            max-height:160px;
+            overflow-y: auto;
+        }
+
+        .allCheckbox {
+            padding-left: 20px;
+            font-weight:bold;
+        }
+
+        .item {
+            display: inline-block;
+
+            height: 30px;
+            padding-left: 20px;
+        }
+
+        .item label{
+            font-size:11px
+        }
+
+        .item input[type="checkbox"],
+        .allCheckbox input[type="checkbox"] {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+         .allCheckbox input[type="checkbox"] {
+            margin-top: 18px;
+        }
+
+        .item input[type="checkbox"]:disabled {
+            opacity: 0.3;
+        }
+
+  </ui:style>
+
+    <g:FlowPanel styleName="{style.wrapper}">
+        <c:AllCheckbox ui:field="allCheckBox" styleName="{style.allCheckbox}"/>
+        <g:FlowPanel ui:field="content" styleName="{style.content}"/>
+    </g:FlowPanel>
+
+</ui:UiBinder>

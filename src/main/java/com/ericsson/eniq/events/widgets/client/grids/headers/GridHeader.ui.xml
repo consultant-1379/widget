@@ -1,0 +1,50 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.container {
+			float: left;
+		}
+		
+		.headerContainer {
+			background-color: #e8e8e8;
+			background-image: literal('linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)'
+				);
+			background-image: literal('-moz-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)'
+				);
+			background-image: literal('-webkit-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)'
+				);
+			background-image: literal('-webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(253, 253, 253)), color-stop(1, rgb(232, 232, 232)))'
+				);
+			/*border: 1px solid #c5c6c7;*/
+			color: #333;
+			cursor: pointer;
+			padding: 0px 0 0 9px;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: -moz-none;
+			white-space: nowrap;
+			font-family: Arial;
+			font-size: 12px;
+			height: 20px;
+			border: 1px solid #CCCCCC;
+		}
+		
+		.headerContainer>div {
+			padding-top: 2px;
+		}
+		
+		.filterContainer {
+			height: 22px;
+		}
+	</ui:style>
+	<g:FlowPanel ui:field="container" styleName="{style.container}">
+		<g:FlowPanel styleName="{style.headerContainer}">
+			<g:Label ui:field="header"></g:Label>
+		</g:FlowPanel>
+		<g:SimplePanel ui:field="filterContainer" visible="false"
+			styleName="{style.filterContainer}"></g:SimplePanel>
+	</g:FlowPanel>
+
+</ui:UiBinder>

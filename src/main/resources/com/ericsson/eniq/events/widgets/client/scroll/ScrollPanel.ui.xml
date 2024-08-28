@@ -1,0 +1,46 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:s='urn:import:com.ericsson.eniq.events.widgets.client.scroll'>
+	<ui:with field='resources'
+		type='com.ericsson.eniq.events.widgets.client.scroll.ScrollPanel.ScrollBarResourceBundle' />
+	<ui:style>
+		.verticalScrollContainer {
+			float: right;
+		}
+		
+		.horizontalScrollContainer {
+			float: left;
+		}
+	</ui:style>
+	<g:FlowPanel>
+		<s:ScrollablePanel ui:field="scrollableContainer"
+			addStyleNames="{resources.style.scrollPanel}"></s:ScrollablePanel>
+		<g:FlowPanel ui:field="verticalScrollContainer" styleName="{style.verticalScrollContainer}"
+			addStyleNames="{resources.style.verticalScrollBar}" visible="false">
+			<s:ScrollBarArrow ui:field="upArrow" resource="{resources.upArrowImage}"
+				addStyleNames="{resources.style.upArrow}" height="13px"
+				width="{resources.style.innerTrackWidth}"></s:ScrollBarArrow>
+			<s:ScrollTrack ui:field="verticalScrollTrack"
+				styleName="{resources.style.verticalScrollTrack}">
+			</s:ScrollTrack>
+			<s:ScrollBarArrow ui:field="downArrow" resource="{resources.downArrowImage}"
+				addStyleNames="{resources.style.downArrow}" height="13px"
+				width="{resources.style.innerTrackWidth}"></s:ScrollBarArrow>
+		</g:FlowPanel>
+		<g:FlowPanel ui:field="horizontalScrollContainer"
+			styleName="{style.horizontalScrollContainer}" addStyleNames="{resources.style.horizontalScrollBar}" visible="false">
+			<s:ScrollBarArrow ui:field="leftArrow" resource="{resources.leftArrowImage}"
+				addStyleNames="{resources.style.leftArrow}" height="{resources.style.innerTrackWidth}"
+				width="13px"></s:ScrollBarArrow>
+			<s:ScrollTrack ui:field="horizontalScrollTrack"
+				styleName="{resources.style.horizontalScrollTrack}">
+			</s:ScrollTrack>
+			<s:ScrollBarArrow ui:field="rightArrow" resource="{resources.rightArrowImage}"
+				addStyleNames="{resources.style.rightArrow}" height="{resources.style.innerTrackWidth}"
+				width="13px"></s:ScrollBarArrow>
+		</g:FlowPanel>
+		<g:FlowPanel ui:field="corner" styleName="{resources.style.corner}"
+			visible="false"></g:FlowPanel>
+	</g:FlowPanel>
+
+</ui:UiBinder>

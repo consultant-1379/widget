@@ -1,0 +1,5 @@
+//Only windows that can be dragged or repositioned (dashboard widgets) should be set isDraggable = true.<br>
+//Set isDraggabale = false, prevents the window from changing it's title bar onMouseOver event.
+<br>final TitleWindow titleWindow = new TitleWindow("This window is not draggable", 60, false);
+<p>//If isDraggable is not set the default value (isDraggable = true) is taken.
+<br>final TitleWindow titleWindowDraggable = new TitleWindow("This window is draggable (top changes onMouseOver)", 60);

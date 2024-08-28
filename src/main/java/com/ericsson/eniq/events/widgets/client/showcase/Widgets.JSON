@@ -1,0 +1,172 @@
+/*
+    1.  How to Add Widgets to the Showcase
+    2.  Add the name, Title and image into the correct category
+    3.  Create a nameSnipet Java Class
+    4.  Create a name.txt file with the Source Code
+    5.  Add the If Statement in callSnipet.java
+ */
+
+
+{
+    "button": [{
+        "name": "textButton",
+        "title": "Text Button",
+        "image": "TextButton.jpg"
+    },
+        {
+         "name": "imageButton",
+         "title": "Image Button",
+         "image": "ImageButton.jpg"
+        },
+        {
+        "name": "cogButton",
+        "title": "Cog Button",
+         "image": "Cog.jpg"
+        }
+    ],
+
+    "map": [{
+        "name": "mapContextMenu",
+        "title": "Context Menu",
+        "image": "ContextMenu.jpg"
+    },
+        {
+        "name": "popCell",
+        "title": "PopCell",
+        "image": "Popcell.jpg"
+        },
+        {
+        "name": "thresholdWidget",
+        "title": "Threshold",
+        "image": "Threshold.jpg"
+        }
+    ],
+
+    "toggle": [{
+        "name": "dropDownMenu",
+        "title": "Drop Down",
+        "image": "Drop.jpg"
+    },
+        {
+        "name": "collapsePanel",
+        "title": "Collapse Panel",
+        "image": "Collapse.jpg"
+        },
+        {
+        "name": "toggleButtonMiniOnOff",
+        "title": "Toggle Mini",
+        "image": "Togglemini.jpg"
+        },
+        {
+        "name": "toggleButtonOnOff",
+        "title": "Toggle Button",
+        "image": "Togglebutton.jpg"
+        },
+        {
+        "name": "toggleRail",
+        "title": "Toggle Rail",
+        "image": "ToggleRail.jpg"
+        }
+    ],
+
+    "popUp": [{
+        "name": "floatingWindow",
+        "title": "Floating Window",
+        "image": "Floating.jpg"
+    },
+        {
+        "name": "messageDialog",
+        "title": "Message Dialog",
+        "image": "MessageDialog.jpg"
+        },
+        {
+        "name": "calendar",
+        "title": "Calendar",
+        "image": "Calendar.jpg"
+        },
+        {
+        "name": "drillDown",
+        "title": "DrillDown",
+        "image": "Drill.jpg"
+        }
+    ],
+
+    "text": [{
+        "name": "extendedTextBox",
+        "title": "Extended Text Box",
+        "image": "ExtendedTextBox.jpg"
+        },
+        {
+        "name": "extendedSuggestBox",
+        "title": "Extended Suggestion Box",
+        "image": "ExtendedSuggestBox.jpg"
+        }
+      ],
+
+    "misc": [{
+        "name": "breadcrumb",
+        "title": "Bread Crumb",
+        "image": "Breadcrumb.jpg"
+    },
+        {
+        "name": "messagePanel",
+        "title": "Message Panel",
+        "image": "MessagePanel.jpg"
+        },
+        {
+         "name": "titleWindow",
+         "title": "Title Window",
+         "image": "TitleWindow.jpg"
+        },
+        {
+         "name": "grid",
+         "title": "GWT Grid",
+         "image": "Grid.jpg"
+        }
+    ],
+
+    "beta": [{
+        "name": "slideBar",
+        "title": "Slide Bar",
+        "image": "Slide.jpg"
+    }
+    ],
+
+    "links": [{
+        "name": "ENIQ Events UI",
+        "title":"ENIQ Events UI",
+        "image": "ENIQEVENTSUI.jpg",
+        "address": "http://confluence-oss.lmera.ericsson.se/login.action?os_destination=%2Fpages%2Fviewpage.action%3FpageId%3D21102633"
+    },
+        {
+        "name": "GWT Showcase",
+        "title":"GWT Showcase",
+        "image": "GWTShowcase.jpg",
+        "address": "http://gwt.googleusercontent.com/samples/Showcase/Showcase.html#!CwCheckBox"
+        },
+        {
+        "name": "W3 School",
+        "title":"W3 School",
+        "image": "W3School.jpg",
+        "address": "http://www.w3schools.com/css/"
+        },
+        {
+        "name": "DEFT UI Community Of Practice",
+        "title":"DEFT UI Community Of Practice",
+        "image": "DEFT.jpg",
+        "address": "http://confluence-oss.lmera.ericsson.se/login.action?os_destination=%2Fdisplay%2FDEFTO%2FDEFT%2BUI%2BCommunity%2BOf%2BPractice"
+        },
+        {
+        "name": "OpenLayers Showcase",
+        "title":"OpenLayers Showcase",
+        "image": "OpenLayers.jpg",
+        "address": "http://demo.gwt-openlayers.org/gwt_ol_showcase/GwtOpenLayersShowcase.html"
+        },
+        {
+        "name": "Stack OverFlow",
+        "title":"Stack OverFlow",
+        "image": "Stack.jpg",
+        "address": "http://stackoverflow.com/"
+        }
+    ]
+}

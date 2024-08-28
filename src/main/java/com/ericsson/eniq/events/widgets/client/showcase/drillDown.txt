@@ -1,0 +1,27 @@
+
+final DrillDialog drillDialog = new DrillDialog();                                            </br>
+//Set Drill Type                                                                              </br>
+final DrillCategoryType drillType= new DrillCategoryType("Example","Drill Down Option 3");    </br>
+                                                                                              </br>
+//Set Drill Down Call Back                                                                         </br>
+final IDrillCallback callback = new IDrillCallback() {                                        </br>
+      @Override                                                                               </br>
+      public void onDrillDownSelected(String drillDownTargetId) {                             </br>
+      //Add Code                                                                              </br>
+      }};                                                                                     </br>
+                                                                                              </br>
+                                                                                              </br>
+drillDialog.addDrillOption(drillType, callback);    </br>
+                                                    </br>
+//Add Drill Down To Map Context                     </br>
+popCell.addClickHandler(new ClickHandler() {        </br>
+        @Override                                   </br>
+        public void onClick(ClickEvent event) {     </br>
+               //Get X,Y relative to mouse. Adjust as needed  </br>
+               int x = event.getClientX()-20;       </br>
+               int y = event.getClientY()-160;      </br>
+               drillDialog.createPanel();           </br>
+               drillDialog.setPopupPosition(x, y);  </br>
+               drillDialog.show();                  </br>
+                    }                               </br>
+                });                                 </br>

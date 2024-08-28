@@ -1,0 +1,37 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:f="urn:import:com.ericsson.eniq.events.widgets.client.launch">
+
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.widgets.client.launch.resources.LaunchResourceBundle' />
+
+	<ui:style>
+		.flowPanel {
+			height: 100%;
+			overflow: visible !important;
+		}
+		
+		.menuHolder {
+			height: 100%;
+		}
+		
+		.overStyle {
+			overflow: visible !important;
+		}
+	</ui:style>
+	<g:FlowPanel styleName="{resourceBundle.style.container}"
+		ui:field="container">
+		<g:Label styleName="{resourceBundle.style.header}" ui:field="header"
+			text="Launch Menu"></g:Label>
+		<f:LaunchResizerPanel styleName="{resourceBundle.style.resizer}"
+			ui:field="resizerPanel" resizingEnabled="false">
+			<g:Image styleName="{resourceBundle.style.handle}" ui:field="handle"></g:Image>
+		</f:LaunchResizerPanel>
+		<g:SimplePanel styleName="{resourceBundle.style.inner}"
+			addStyleNames="{style.overStyle}">
+			<g:FlowPanel styleName="{style.flowPanel}" ui:field="flowPanel"></g:FlowPanel>
+		</g:SimplePanel>
+
+		<g:HTML ui:field="footerPanel" styleName="{resourceBundle.style.footer}"></g:HTML>
+	</g:FlowPanel>
+</ui:UiBinder>

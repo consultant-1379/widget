@@ -1,0 +1,38 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.widgets.client.dropdown.DropDownResourceBundle' />
+
+	<ui:style>
+		.warningLabel {
+			color: #333333;
+			font-family: "Arial";
+			font-size: 11px;
+			margin-left: 5px;
+			float: left;
+			line-height: 20px;
+		}
+		
+		.warningWrapper {
+			vertical-align: middle;
+			display: table-cell;
+			height: 21px;
+			text-align: center;
+			width:100%;
+		}
+		
+		.warningIcon {
+			float: left;
+		}
+	</ui:style>
+	<ui:image field='warningIcon' src='warning_icon.png' />
+	<g:HTMLPanel ui:field="messageWrapper">
+		<div class="{style.warningWrapper}">
+			<g:Image resource="{warningIcon}" styleName="{style.warningIcon}" />
+			<g:Label ui:field="warningMessage" styleName="{style.warningLabel}" />
+		</div>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

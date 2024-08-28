@@ -1,0 +1,77 @@
+/*Toggle Styles Custom toggle button*/
+/*Background with text on/off*/
+@external toggle, toggle-up, toggle-up-hovering, toggle-down, toggle-down-hovering,toggle-up-disabled;
+.toggle {
+    text-align: left;
+    width: 80px;
+    height: 20px;
+    -moz-box-shadow: inset 0 0 0 1px #9A9999;
+    -webkit-box-shadow: inset 0 0 0 1px #9A9999;
+    box-shadow: inset 0 0 0 1px #9A9999;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius: 6px;
+
+}
+
+.toggle:focus{
+    outline: 0px;
+}
+
+@sprite .toggle-up {
+    gwt-image: "onBackgroundImage";
+}
+
+@sprite .toggle-up-disabled {
+    gwt-image: "onBackgroundImage";
+    opacity:0.5;
+}
+
+@sprite .toggle-up-hovering {
+    gwt-image: "onBackgroundImage";
+    cursor: pointer;
+}
+
+@sprite .toggle-down {
+    gwt-image: "offBackgroundImage";
+}
+
+@sprite .toggle-down-hovering {
+    gwt-image: "offBackgroundImage";
+    cursor: pointer;
+}
+
+/*Slider toggle component - grey moving part*/
+.toggle-up-hovering > img,
+.toggle-up > img,
+.toggle-up-disabled>img{
+    -moz-transform: translate(40px, 0px);
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transform: translate(40px, 0px);
+    -webkit-transition: all 0.1s ease-in-out;
+    -ms-transform: translate(40px, 0px);
+    -ms-transition: all 0.1s ease-in-out;
+}
+
+.toggle-down-hovering > img,
+.toggle-down > img {
+    -moz-transform: translate(0px, 0px);
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transform: translate(0px, 0px);
+    -webkit-transition: all 0.1s ease-in-out;
+    -ms-transform: translate(0px, 0px);
+    -ms-transition: all 0.1s ease-in-out;
+}
+
+.toggle:focus > img{
+    -moz-box-shadow: inset 0 0 0 2px #00A4D9;
+    -webkit-box-shadow: inset 0 0 0 2px #00A4D9;
+    box-shadow: inset 0 0 0 2px #00A4D9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.toggle-up-disabled:focus>img{
+      box-shadow:none;
+}

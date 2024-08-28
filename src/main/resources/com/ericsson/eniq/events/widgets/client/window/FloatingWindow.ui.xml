@@ -1,0 +1,136 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:e='urn:import:com.ericsson.eniq.events.widgets.client.button'
+	xmlns:w='urn:import:com.ericsson.eniq.events.widgets.client.window'
+	xmlns:t='urn:import:com.ericsson.eniq.events.widgets.client.window.toolbar'>
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.widgets.client.WidgetsResourceBundle' />
+	<ui:style>
+		@eval windowBorder com.ericsson.eniq.events.widgets.client.window.FloatingWindow.getBorderWidth();
+		@eval footerHeight com.ericsson.eniq.events.widgets.client.window.FloatingWindow.getFooterHeight();
+		@eval headerHeight com.ericsson.eniq.events.widgets.client.window.FloatingWindow.getHeaderHeight();
+		.popupContainer {
+			border: windowBorder solid #cdcdcd;
+			border-style: solid;
+			border-radius: 10px;
+			-moz-border-radius: 10px;
+			background-color: white;
+			border: 1px solid #ffffff;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+			-webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+			overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		
+		.windowTitle {
+			width: 100%;
+			table-layout: fixed;
+			padding-left: 8px;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+			line-height: headerHeight;
+			border-bottom: solid 1px rgb(230, 230, 230);
+			background-image: linear-gradient(top, #E3E3E2 0%, #BFBFBF 100%);
+			background-image: literal('-o-linear-gradient(top, #E3E3E2 0%, #BFBFBF 100%)');
+			background-image: literal('-moz-linear-gradient(top, #E3E3E2 0%, #BFBFBF 100%)');
+			background-image: literal('-webkit-linear-gradient(top, #E3E3E2 0%, #BFBFBF 100%)');
+			background-image: literal('-ms-linear-gradient(top, #E3E3E2 0%, #BFBFBF 100%)');
+			background-image: literal('-webkit-gradient(linear, left top, left bottom, color-stop(0, #E3E3E2), color-stop(1, #BFBFBF))'
+				);
+		}
+		
+		.headerLabel {
+			font-size: 11px;
+			font-family: "Arial";
+			color: #333333;
+			font-weight: bold;
+		}
+		
+		.handle {
+			overflow: hidden;
+			height: headerHeight;
+			outline: 0;
+		}
+		
+		.toolbar {
+			height: 30px;
+			background-color: #BFBFBF;
+			border-bottom: 1px solid #E6E6E6;
+		}
+		
+		.toolbar td {
+			vertical-align: middle !important;
+		}
+		
+		.windowBody {
+			
+		}
+		
+		.windowFooter {
+			width: 100%;
+			height: footerHeight;
+			background-color: #e3e3e3;
+			background-image: linear-gradient(top, #EFF0F0 0%, #FFFFFF 100%);
+			background-image: literal('-moz-linear-gradient(top, #EFF0F0 0%, #FFFFFF 100%)');
+			background-image: literal('-webkit-linear-gradient(top, #EFF0F0 0%, #FFFFFF 100%)');
+			background-image: literal('-ms-linear-gradient(top, #EFF0F0 0%, #FFFFFF 100%)');
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+			border-top: 1px solid #cfcece;
+		}
+		
+		.footerLabel {
+			font-size: 11px;
+			font-family: Arial;
+			color: #333333;
+			text-align: right;
+			line-height: 21px;
+			margin: 0 8px;
+		}
+	</ui:style>
+
+	<w:ResizePanel ui:field="resizePanel">
+		<g:FlowPanel ui:field="windowContainer" styleName="{style.popupContainer}">
+			<g:HorizontalPanel styleName="{style.windowTitle}">
+				<g:cell width="20px" horizontalAlignment="left"
+					verticalAlignment="middle">
+					<g:Image ui:field="headerIcon" />
+				</g:cell>
+				<g:cell horizontalAlignment="left">
+					<g:FocusPanel ui:field="draggable" styleName="{style.handle}">
+						<g:Label ui:field="windowTitle" styleName="{style.headerLabel}" />
+					</g:FocusPanel>
+				</g:cell>
+				<g:cell width="17px" verticalAlignment="middle">
+					<e:ImageButton ui:field="minimizeButton"
+						imageResource="{resourceBundle.minimizeButton}" visible="false" />
+				</g:cell>
+				<g:cell width="17px" verticalAlignment="middle">
+					<g:Image ui:field="maximizeRestoreButton" />
+				</g:cell>
+				<g:cell width="16px" verticalAlignment="top">
+					<e:ImageButton ui:field="closeIcon" imageResource="{resourceBundle.closeIcon}" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<t:WindowToolbar ui:field="windowToolbar" styleName="{style.toolbar}"
+				width="100%" visible="false"></t:WindowToolbar>
+			<g:FlowPanel ui:field="windowBody" width="100%"
+				styleName="{style.windowBody}" />
+			<g:FlowPanel ui:field="windowFooter" styleName="{style.windowFooter}">
+				<g:HorizontalPanel width="100%">
+					<g:cell>
+						<g:SimplePanel ui:field="footerWidgetHolder"
+							styleName="{style.footerLabel}" />
+					</g:cell>
+					<g:cell>
+						<g:Label ui:field="footerLabel" styleName="{style.footerLabel}" />
+					</g:cell>
+				</g:HorizontalPanel>
+			</g:FlowPanel>
+		</g:FlowPanel>
+	</w:ResizePanel>
+</ui:UiBinder>

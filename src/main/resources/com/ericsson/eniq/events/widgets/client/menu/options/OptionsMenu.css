@@ -1,0 +1,49 @@
+@def BORDER_RADIUS 8px;
+
+.menu {
+    background-color: #fff;
+    border: 1px solid #a3a3a3;
+
+    \-moz-box-shadow: 1px 1px 10px #aaa;
+    \-webkit-box-shadow: 1px 1px 10px #aaa;
+    box-shadow: 1px 1px 10px #aaa;
+
+    border-bottom-left-radius: BORDER_RADIUS;
+    border-bottom-right-radius: BORDER_RADIUS;
+
+    padding: 6px 0;
+    margin: 0;
+    margin-top: -1px;
+    width: 188px;
+    z-index: 5101;
+}
+
+.menu.right {
+    border-top-left-radius: BORDER_RADIUS;
+}
+
+.menu.left {
+    border-top-right-radius: BORDER_RADIUS;
+}
+
+.item {
+    cursor: pointer;
+
+    font-family: Arial;
+    font-size: 12px;
+
+    margin: 1px;
+    padding: 3px 13px;
+
+    word-wrap: break-word;
+}
+
+.item:hover {
+    background-color: #d5f1fe;
+}
+
+.separator {
+    height: 1px;
+    margin: 8px 0;
+    background-color: #c7c7c7;
+}

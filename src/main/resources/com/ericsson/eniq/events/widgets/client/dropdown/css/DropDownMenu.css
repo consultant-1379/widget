@@ -1,0 +1,117 @@
+@def ICON_WIDTH value('iconNormal.getWidth', 'px');
+
+/* To be able position popup inside wrapperContainer */
+.wrapperContainer {
+    height: 20px;
+    width: 150px; /* Default width */
+
+    position: relative;
+}
+
+table.container > tbody > tr > td:first-child {
+    padding: 0 1px 0 9px;
+}
+
+.menu {
+    cursor: pointer;
+    outline: 0;
+
+    /* To make menu be on top of popup */
+    position: absolute;
+    width: 100%;
+}
+
+.menu.open {
+    z-index: 2;
+}
+
+.menu > table {
+    background-color: #dadada;
+    background-image: linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-image: literal("-moz-linear-gradient(top, #ffffff 0%, #dadada 100%)");
+    background-image: literal("-webkit-linear-gradient(top, #ffffff 0%, #dadada 100%)");
+
+    border: 1px solid #9a9999;
+    border-radius: 4px;
+
+    font-family: Arial;
+    font-size: 11px;
+
+    height: 20px;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.focus > table{
+    border: 1px solid #00A9D4;
+}
+
+.focus > table > tbody > tr > td:first-child {
+    -moz-box-shadow: 1px 0 0 #00A9D4 inset, 0 1px 0 #00A9D4 inset, 0 -1px 0 #00A9D4 inset !important;
+    -webkit-box-shadow: 1px 0 0 #00A9D4 inset, 0 1px 0 #00A9D4 inset, 0 -1px 0 #00A9D4 inset !important;
+    box-shadow: 1px 0 0 #00A9D4 inset, 0 1px 0 #00A9D4 inset, 0 -1px 0 #00A9D4 inset !important;
+    -moz-border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.menu > table > tbody > tr > td:first-child {
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Icon related styles */
+.menu > table > tbody > tr > td:first-child + td {
+    width: ICON_WIDTH;
+}
+
+@sprite .focus .icon {
+    -moz-box-shadow: -1px 0 0 #00A9D4 inset, 0 1px 0 #00A9D4 inset, 0 -1px 0 #00A9D4 inset !important;
+    -webkit-box-shadow: -1px 0 0 #00A9D4 inset, 0 1px 0 #00A9D4 inset, 0 -1px 0 #00A9D4 inset !important;
+    box-shadow: -1px 0 0 #00A9D4 inset, 0 1px 0 #00A9D4 inset, 0 -1px 0 #00A9D4 inset !important;
+    -moz-border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    gwt-image: "iconNormal";
+    width: ICON_WIDTH;
+}
+
+@sprite .menu .icon {
+    gwt-image: "iconNormal";
+    width: ICON_WIDTH;
+}
+
+@sprite .menu:hover .icon {
+    gwt-image: "iconHover";
+}
+
+@sprite .menu:active .icon {
+    gwt-image: "iconClick";
+}
+
+/* Disabling styles */
+.disabled {
+    cursor: auto;
+    opacity: 0.3;
+}
+
+@sprite div.disabled .icon, div.disabled:hover .icon, div.disabled:active .icon {
+    gwt-image: "iconNormal";
+}
+
+/* Style for content textbox */
+.content {
+    background: transparent;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+
+    font-family: Arial;
+    font-size: 11px;
+
+    white-space: nowrap;
+}

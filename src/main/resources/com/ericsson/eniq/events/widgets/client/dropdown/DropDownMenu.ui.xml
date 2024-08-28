@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:with field='resourceBundle'
+             type='com.ericsson.eniq.events.widgets.client.dropdown.DropDownResourceBundle'/>
+
+    <g:FlowPanel ui:field="container" styleName="{resourceBundle.menuStyle.wrapperContainer}">
+        <g:FocusPanel styleName="{resourceBundle.menuStyle.menu}" ui:field="wrapper">
+            <g:Grid cellPadding="0" cellSpacing="0" styleName="{resourceBundle.menuStyle.container}">
+                <g:row>
+                    <g:customCell>
+                        <g:Label ui:field="content" styleName="{resourceBundle.menuStyle.content}"/>
+                    </g:customCell>
+                    <g:customCell>
+                        <g:HTML ui:field="icon" styleName="{resourceBundle.menuStyle.icon}"/>
+                    </g:customCell>
+                </g:row>
+            </g:Grid>
+        </g:FocusPanel>
+    </g:FlowPanel>
+</ui:UiBinder>

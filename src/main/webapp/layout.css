@@ -1,0 +1,180 @@
+/* Styling for Showcase Explorer only */
+body{
+    font-family: Arial;
+    font-size: 12px;
+    background-color: #e8e8e8 !important;
+}
+
+#container{
+    margin: auto;
+    min-height: 800px;
+    width: 780px;
+    height: auto !important;
+    min-height: 100%;
+    background-color: #e8e8e8  !important;
+    /*border: 5px solid #FFFFFF;*/
+}
+
+#se-header{
+    background-color: #ffffff;
+    color: #00285f;
+    height: 40px;
+    width: 780px;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 5px solid #e8e8e8;
+}
+
+#se-content{
+    /*margin-left: 201px;*/
+    /*padding: 20px;*/
+    /*padding-bottom: 0;*/
+    width: 780px;
+    min-height: 800px;
+    overflow: hidden;
+    background-color: #e8e8e8;
+    /*border-bottom:2px solid  #e8e8e8;*/
+    }
+
+.Menu{
+    background-color: #ffffff;
+}
+
+.example-panel{
+    float: left;
+    width: 350px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.source-panel{
+    float: left;
+}
+
+#se-footer{
+    border-top: 2px solid #b1b3b4;
+    height: 40px;
+    width: 780px;
+    line-height: 30px;
+    color: #b1b3b4;
+    background-color: #ffffff;
+    /*padding-left: 10px;*/
+}
+
+.nav-item{
+    padding: 5px;
+    height: 20px;
+    line-height: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-item:hover{
+    border-left: 2px solid #AB8D47;
+    font-weight: bold;
+}
+
+.selected-item {
+    border-left: 2px solid #AB8D47;
+    font-weight: bold;
+}
+
+.OverFlow{
+    max-height: 120px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.Align{
+    margin:auto;
+    display:inline-block;
+    text-align: center;
+}
+
+.Headers{
+        font-size: 14px;
+        font-family: Arial;
+        color: black;
+}
+
+.OverFlow{
+    max-height: 120px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.rounded-corners{
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+    border-color: #00285f;
+}
+
+.Centre{
+     border-bottom: 10px solid #e8e8e8;
+    /*border-top: 5px solid #e8e8e8;*/
+    background-color: #e8e8e8;
+}
+
+.Border{
+    border-top:5px solid #e8e8e8;
+    background-color: #ffffff;
+}
+
+.PaddingLeft{
+    padding-left:15px;
+}
+
+.Decor{
+    color: #000000;
+    cursor: default;!important
+}
+
+.Normal{
+    color: #787878;
+    cursor: default;!important
+}
+
+.LabelBar{
+    background-image: url('Images/BarLabel.png');!important
+    background-size: 780px 30px;
+}
+
+.Border2{
+    border-bottom: 2px solid #45d3f3;
+}
+
+.Border3{
+    border-top: 5px rgba(0, 0, 0, 0.78);
+}
+
+.DetailsPanel{
+    background-color: #f1f1f1;
+    border-top: 10px solid white;
+    padding-top: 5px;
+    /*padding-bottom: 5px;*/
+    width: 780px;
+}
+
+.paddingDown{
+    margin-top:60px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.Listbox{
+    color: #787878;
+    border: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.links{
+    background-color: #ffffff;
+    min-height: 800px;
+}
+
+
+
+

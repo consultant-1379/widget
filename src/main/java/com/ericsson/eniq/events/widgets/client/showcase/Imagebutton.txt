@@ -1,0 +1,3 @@
+// You will need to specify your image for button as ClientBundle resource</br>
+CollapsePanelResourceBundle bundle = GWT.create(CollapsePanelResourceBundle.class);</br>
+ImageButton imageButton = new ImageButton(bundle.arrow_across());

@@ -1,0 +1,75 @@
+@external bottom, left, right, center;
+.wrapperPanel {
+	background-color: #fff;
+	margin: 5px;
+	position: relative;
+}
+
+.wrapperPanel::after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: -21px;
+	border-width: 15px 15px 0;
+	border-color: #ffffff transparent;
+	border-style: solid;
+}
+
+.wrapperPanel.bottom::after {
+	top: -21px;
+	border-width: 0 15px 15px;
+    left:15%;
+}
+
+.wrapperPanel.left::after {
+	left: 75%;
+}
+
+.wrapperPanel.right::after {
+	left: 15%;
+}
+
+.wrapperPanel.center::after {
+	margin-left: -10px;
+	left: 15%;       /*50% */
+}
+
+.contentPanel {
+	overflow: auto;
+	text-align: left;
+	min-width: 120px;
+	max-width: 300px;
+	max-height: 150px;
+    padding-left: 10px;
+}
+
+.contentPanel>div {
+	text-decoration: underline;
+	color: #0066cc;
+	cursor: pointer;
+    font-size:11px;
+    font-family: arial;
+    font-weight:bold;
+}
+
+.panelAlign {
+	position: relative;
+	vertical-align: middle;
+	padding: 10px;
+	white-space: nowrap;
+    text-indent: 9px;
+}
+
+.header {
+	padding-left: 5px;
+	font-family: "Arial";
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 16px;
+}
+
+.drillDialogIcon {
+	float: left;
+	padding-right: 5px;
+}

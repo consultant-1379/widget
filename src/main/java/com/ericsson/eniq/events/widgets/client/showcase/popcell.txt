@@ -1,0 +1,20 @@
+//PopCell to use in the MapContextMenu<br>
+//This is an example of the PopCell in use. The Class ClusterPopCell extends the generic PopCell.<br>
+//In this example you'll also see the use of DetailsPopup, by hovering over the cell.<br>
+
+//A PopCell must have a height and width. This cannot change after creation.<br>
+//Also to note: all PopCells added to a menu MUST have the same height and width.<br>
+
+//A ClusterPopCell displays the color and name of a cell. To configure, set its height, width, color and name.<br>
+ClusterPopCell popCell = new ClusterPopCell(24, 200, "#e1de5a", "Test text...");   <br>
+
+//The ClusterPopCell displays a popup on Hover. To setup the popup all that is needed is to populate its data.<br>
+//In this case the Cell ID, KPI and Value.<br>
+final LinkedHashMap<String, String> popupData = new LinkedHashMap<String, String>();   <br>
+popupData.put("Cell ID ", "1234567");      <br>
+popupData.put("KPI ", "This is a useless KPI");       <br>
+popupData.put("Value ", "100"+"%");      <br>
+popCell.setPopupData(popupData);       <br>
+
+
+

@@ -1,0 +1,96 @@
+@def ICON_WIDTH value('iconNormal.getWidth', 'px');
+
+/* To be able position popup inside wrapperContainer */
+.wrapperContainer {
+    height: 20px;
+    width: 150px;
+
+    position: relative;
+}
+
+/* To make dropdown be on top of popup */
+.dropdown {
+    position: absolute;
+    width: 100%;
+}
+
+.dropdown.open {
+    z-index: 2;
+}
+
+table.container > tbody > tr > td:first-child {
+    padding: 0 1px 0 8px;
+}
+
+.dropdown > table {
+    background-color: #fff;
+
+    -webkit-box-shadow: inset 0px 1px 2px #bdbdbd;
+    box-shadow: inset 0px 1px 2px #bdbdbd;
+
+    border: 1px solid #9a9999;
+    border-radius: 4px;
+
+    font-family: Arial;
+    font-size: 11px;
+
+    height: 20px;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.dropdown > table > tbody > tr > td:first-child {
+    height: 20px;
+    vertical-align: middle;
+}
+
+/* Icon related styles */
+.dropdown > table > tbody > tr > td:first-child + td {
+    width: ICON_WIDTH;
+}
+
+@sprite .icon {
+    gwt-image: "iconNormal";
+    cursor: pointer;
+
+    width: ICON_WIDTH;
+}
+
+@sprite .icon:hover {
+    gwt-image: "iconHover";
+}
+
+@sprite .icon:active {
+    gwt-image: "iconClick";
+}
+
+/* Disabling styles */
+.disabled {
+    opacity: 0.3;
+}
+
+@sprite .disabled .icon, .disabled .icon:hover, .disabled .icon:active {
+    gwt-image: "iconNormal";
+    cursor: auto;
+}
+
+/* Style for content textbox */
+.content {
+    background: transparent;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+
+    font-family: Arial;
+    font-size: 11px;
+
+    width: 100%;
+}
+
+/** Style for the default/prompt text of a text box **/
+input.defaultText {
+	color: #7f7f7f !important;
+}

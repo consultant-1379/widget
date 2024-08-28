@@ -1,0 +1,13 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:e='urn:import:com.ericsson.eniq.events.widgets.client.button'>
+	<ui:style src="css/drill_dialog.css" />
+	<ui:image field='drillIcon' src='images/Info_icon.png' />
+	<g:HTMLPanel styleName="{style.wrapperPanel}">
+		<g:Image styleName="{style.drillDialogIcon}" resource="{drillIcon}"></g:Image>
+		<g:Label styleName="{style.header}"	ui:field="popupHeading" text="Drill By Options"></g:Label>
+		<g:VerticalPanel styleName="{style.panelAlign}">
+			<g:FlowPanel ui:field="contentPanel" styleName="{style.contentPanel}"></g:FlowPanel>			
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

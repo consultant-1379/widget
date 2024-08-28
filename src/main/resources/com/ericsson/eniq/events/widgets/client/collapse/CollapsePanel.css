@@ -1,0 +1,50 @@
+.wrapper {
+    font-family: Arial;
+    font-size: 12px;
+    margin-top: 0px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-left: 1px;
+    position: relative;
+}
+
+.disabled .header {
+    background-color: #00ffff;
+    color: #b7b7b7;
+    cursor: default;
+}
+
+.header {
+    background-color: #e8e8e8;
+    background-image: literal('linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+    background-image: literal('-moz-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+    background-image: literal('-webkit-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)');
+    background-image: literal('-webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(253, 253, 253)), color-stop(1, rgb(232, 232, 232)))');
+
+    border: 1px solid #c5c6c7;
+
+    color: #333;
+    cursor: pointer;
+    padding-top: 1px;
+    padding-left: 9px;
+    padding-bottom: 2px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+
+    white-space: nowrap;
+}
+
+@sprite .icon {
+    gwt-image: "arrow_across";
+
+    position: absolute;
+    top: 5px;
+    right: 9px;
+}
+
+@sprite .open .icon {
+    gwt-image: "arrow_down";
+    right: 8px;
+}

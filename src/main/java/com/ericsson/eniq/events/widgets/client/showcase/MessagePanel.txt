@@ -1,0 +1,5 @@
+
+
+            final ComponentMessagePanel messagePanel = new ComponentMessagePanel();    </br>
+            messagePanel.setWidth("300px");  </br>
+            messagePanel.populate(ComponentMessageType.INFO, "Simple message example");    </br>

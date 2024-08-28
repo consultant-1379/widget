@@ -1,0 +1,19 @@
+
+//Create the Floating Window </br>
+final FloatingWindow floatingWindow = new FloatingWindow(contentPanel, 300, 200, "Floating Window Example");  <br>
+            floatingWindow.setFooterText("Text!!!");     <br>
+            <p>
+
+            //Adding Widget to the Floating Window<br>
+            <p>
+            //Adding a Panel to the Centre <br>
+            Label label = new Label("This is the centre Text");  <br>
+            floatingWindow.add(label);            //Adding the Widgets to the centre Panel<br>
+            <p>
+            //Adding a Panel to the Footer <br>
+            SimplePanel p = new SimplePanel();           <br>
+            p.setHeight("10px");                         <br>
+            p.setWidth("10px");                          <br>
+            p.getElement().getStyle().setBackgroundColor("red"); <br>
+            floatingWindow.setFooterWidget(p);    //Adds the simple Panel to the footer of the floating window <br>
+            contentPanel.add(floatingWindow);     <br>

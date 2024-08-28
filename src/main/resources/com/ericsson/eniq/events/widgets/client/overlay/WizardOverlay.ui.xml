@@ -1,0 +1,89 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:form='urn:import:com.ericsson.eniq.events.widgets.client.overlay.form'>
+
+	<ui:data field='arrow_across' src='images/arrow_across.png' />
+	<ui:data field='arrow_down' src='images/arrow_down.png' />
+	<ui:data field='wizard_background' src='images/white-top-bottom-wizard.gif' />
+	<ui:style
+		type="com.ericsson.eniq.events.widgets.client.overlay.WizardOverlay.WizardOverlayStyle"
+		field="style">
+			@eval headerHeight com.ericsson.eniq.events.widgets.client.overlay.WizardOverlay.getHeaderHeight();
+			@url arrow_across_url arrow_across;
+			@url arrow_down_url arrow_down;
+			@url wizard_background_url wizard_background;
+				/* TODO: Move background images to resource bundle for wizard overlay */
+			.wrapper {
+				font-family: Arial;
+				font-size: 12px;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.header {
+				background-image: arrow_across_url, wizard_background_url;
+				background-repeat: no-repeat, repeat-x;
+				background-position: 5px top, left top;
+				border: 1px solid #DADADA;
+				color: #333;
+				font-size: 11px;
+				font-weight: bold;
+				line-height: headerHeight;
+				padding-left: 25px;
+			}
+			
+			.header.open {
+				background-image: arrow_down_url, wizard_background_url;
+			}
+			
+			.content {
+				background-color: #fff;
+				border: 1px solid #DADADA;
+				border-top: 0;
+				padding-top: 15px;
+				/* Just to make overlay on top of the chart */
+				position: relative;
+				z-index: 1;
+			}
+			
+			.type {
+				padding-left: 20px;
+				padding-right: 6px;
+			}
+			
+			.type label {
+				position: relative;
+				top: -3px;
+				left: 1px;
+				padding-left: 4px;
+			}
+			
+			.buttonsPanel {
+				text-align: center;
+				padding: 10px 0;
+			}
+			
+			.buttonsPanel>button {
+				margin: 0 auto;
+				width: 70px;
+			}
+			
+			.radioButtonPanel {
+				margin-bottom: 10px;
+			}
+		</ui:style>
+
+	<form:WizardFormContainer styleName="{style.wrapper}">
+		<g:Label ui:field="header" styleName="{style.header}" />
+		<g:FlowPanel ui:field="content" styleName="{style.content}"
+			visible="false">
+			<g:FlowPanel ui:field="radioButtonPanel" styleName="{style.radioButtonPanel}" />
+			<g:SimplePanel ui:field="overlayPanelContainer" />
+			<g:SimplePanel styleName="{style.buttonsPanel}">
+				<g:Button ui:field="launchButton" text="Launch" />
+			</g:SimplePanel>
+		</g:FlowPanel>
+	</form:WizardFormContainer>
+
+</ui:UiBinder>

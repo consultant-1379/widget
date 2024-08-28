@@ -1,0 +1,12 @@
+//Create a map context menu      </br>
+ final MapContextMenu mcm = new MapContextMenu();  </br>
+
+//List of cells for the context menu (See PopCell for more)    </br>
+List<PopCell> widgets = new ArrayList<PopCell>();      </br>
+
+//add to the menu         </br>
+mcm.populate(widgets);    </br>
+
+//set position if required & show!    </br>
+ mcm.setPopupPosition(left, top);   </br>
+ mcm.show();       </br>

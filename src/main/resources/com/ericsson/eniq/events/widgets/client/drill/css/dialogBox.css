@@ -1,0 +1,21 @@
+.dialogBox {
+    z-index: 20000; /*must be above 10000  */
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Mozilla */
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Safari and Chrome */
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.chartByLink {
+    font-size: 12px;
+    font-family: arial;
+    white-space: nowrap;
+    font-weight:bold;
+}
+
+.chartByLink:hover {
+    color: #333333;
+}

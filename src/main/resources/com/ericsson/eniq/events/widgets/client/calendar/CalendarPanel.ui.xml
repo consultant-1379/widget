@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:datepicker="urn:import:com.google.gwt.user.datepicker.client"
+             xmlns:d="urn:import:com.ericsson.eniq.events.widgets.client.dropdown">
+    <ui:with field='resourceBundle'
+             type='com.ericsson.eniq.events.widgets.client.calendar.CalendarResourceBundle'/>
+    <g:VerticalPanel>
+        <g:HorizontalPanel>
+            <g:VerticalPanel addStyleNames="{resourceBundle.css.left}">
+                <g:Label text="Start Date" addStyleNames="{resourceBundle.css.HeaderLabels}"/>
+                <datepicker:DatePicker ui:field="fromCalendar" addStyleNames="{resourceBundle.css.EDatePicker}"/>
+                <g:HorizontalPanel>
+                    <d:DropDownMenu ui:field="fromHour" addStyleNames="{resourceBundle.css.dropDown}"/>
+                    <d:DropDownMenu ui:field="fromMin" addStyleNames="{resourceBundle.css.dropDown}"/>
+                </g:HorizontalPanel>
+            </g:VerticalPanel>
+            <g:FocusPanel styleName="{resourceBundle.css.middleArrow}" ui:field="arrowButton"/>
+            <g:VerticalPanel addStyleNames="{resourceBundle.css.right}">
+                <g:Label text="End Date" addStyleNames="{resourceBundle.css.HeaderLabels}"/>
+                <datepicker:DatePicker ui:field="toCalendar" addStyleNames="{resourceBundle.css.EDatePicker}"/>
+                <g:HorizontalPanel>
+                    <d:DropDownMenu ui:field="toHour" addStyleNames="{resourceBundle.css.dropDown}"/>
+                    <d:DropDownMenu ui:field="toMin" addStyleNames="{resourceBundle.css.dropDown}"/>
+                </g:HorizontalPanel>
+            </g:VerticalPanel>
+        </g:HorizontalPanel>
+        <g:SimplePanel height="22px" addStyleNames="{resourceBundle.css.panelMargin}">
+            <g:Label ui:field="errorLabel" text="" styleName="{resourceBundle.css.warningLabel}" visible="false"/>
+        </g:SimplePanel>
+    </g:VerticalPanel>
+</ui:UiBinder>

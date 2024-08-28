@@ -1,0 +1,15 @@
+</br>
+
+//How to Create the Slide Bar Widget </br>
+<p>
+//Creating the Data for the Slidebar</br>
+final List<ColoredBarDataType> coloredBarDataTypes = new ArrayList<ColoredBarDataType>();           </br>
+            coloredBarDataTypes.add(new ColoredBarDataType(40, "green", "item1"));                  </br>
+            coloredBarDataTypes.add(new ColoredBarDataType(30, "blue", "item2"));                   </br>
+            coloredBarDataTypes.add(new ColoredBarDataType(0, "orange", "item3"));                  </br>
+            coloredBarDataTypes.add(new ColoredBarDataType(20, "gray", "item4"));                   </br>
+            coloredBarDataTypes.add(new ColoredBarDataType(10, "red", "item5"));                    </br>
+            final SlideBarDataType dataType = new SlideBarDataType(coloredBarDataTypes, 100, "Service Request"); </br>
+            <p>
+            //Creates the Slide Bar   </br>
+            final SlideGroup slideBar = new SlideGroup(dataType);                 </br>

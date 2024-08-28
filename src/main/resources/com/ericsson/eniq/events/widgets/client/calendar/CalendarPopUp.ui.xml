@@ -1,0 +1,24 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'
+             xmlns:e="urn:import:com.ericsson.eniq.events.widgets.client.calendar">
+
+    <ui:with field='resourceBundle'
+             type='com.ericsson.eniq.events.widgets.client.calendar.CalendarResourceBundle'/>
+
+    <g:PopupPanel ui:field="calendarPopUp" styleName="{resourceBundle.css.calendarPopUp}">
+        <g:VerticalPanel >
+            <g:HorizontalPanel ui:field="header" addStyleNames="{resourceBundle.css.calendarHeader}">
+                <g:Label text="Custom Date and Time" addStyleNames="{resourceBundle.css.calendarHeaderLabel}"/>
+
+            </g:HorizontalPanel>
+            <e:CalendarPanel addStyleNames="{resourceBundle.css.calBody}" ui:field="ecalendar"/>
+            <g:HorizontalPanel addStyleNames="{resourceBundle.css.calButtonsPanel}" >
+                <g:Button ui:field="okButton" text="Ok" width="100px" addStyleNames="{resourceBundle.css.buttons}"/>
+                <g:Button ui:field="cancelButton" text="Cancel" width="100px" addStyleNames="{resourceBundle.css.buttons}"/>
+
+            </g:HorizontalPanel>
+            <g:SimplePanel addStyleNames="{resourceBundle.css.calendarFooter}"/>
+    </g:VerticalPanel>
+    </g:PopupPanel>
+</ui:UiBinder>

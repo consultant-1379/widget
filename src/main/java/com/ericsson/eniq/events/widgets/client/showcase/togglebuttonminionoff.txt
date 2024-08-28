@@ -1,0 +1,8 @@
+//Set the color and the tooltip when creating the mini toggle...
+<br>ToggleButtonMiniOnOff toggleButtonMiniOnOff1 = new ToggleButtonMiniOnOff("#549895", "Button 1: On - Enabled");
+<p>
+<br>//To set the size of a miniToggle(tm)
+<br>toggleMini.setSize(12, 12, Unit.PX);
+<p>
+//For the UI Binding...<br>
+<< tob:ToggleButtonMiniOnOff toolTip="Data Bearer Session" color="#549895" ui:field="toggle1" addStyleNames="{style.miniToggle}" enabled="false" toggledOn="true"/>>

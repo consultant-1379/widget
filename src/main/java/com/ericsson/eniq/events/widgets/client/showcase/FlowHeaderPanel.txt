@@ -1,0 +1,6 @@
+            final FlowHeaderPanel messagePanel = new FlowHeaderPanel(); <br/>
+            messagePanel.setWidth("300px"); <br/>
+            messagePanel.setTitleText("Simple header example"); <br/>
+            messagePanel.setTitle("I am a tooltip"); <br/>
+            messagePanel.add(new HTML("<b>I am a html widget!</b>")); <br/>
+            messagePanel.add(new HTML("<i>Me too!</i>")); <br/>

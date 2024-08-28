@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- NAME OF ENIQ PARENT POM GOES HERE (NOT READY YET) -->
+
+    <name>Eniq Events :: Widgets</name>
+    <groupId>com.ericsson.gwt</groupId>
+    <artifactId>widget</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+
+    <properties>
+        <!-- Convenience property to set the GWT version -->
+        <gwtVersion>2.5.0</gwtVersion>
+        <gin.version>1.5</gin.version>
+        <gxt.version>2.2.5</gxt.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt-2.2.5-gwt22</artifactId>
+            <version>${gxt.version}</version>
+            <classifier>gwt22</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gwt-dnd</groupId>
+            <artifactId>gwt-dnd</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwtVersion}</version>
+            <!--<scope>runtime</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwtVersion}</version>
+            <!--<scope>runtime</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwtVersion}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.gwt.inject</groupId>
+            <artifactId>gin</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.7.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-rasterizer</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-codec</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ericsson.gwt</groupId>
+            <artifactId>common</artifactId>
+             <version>R12J04</version>
+
+        </dependency>
+    </dependencies>
+
+    <!-- Include source in artifact -->
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
+    <profiles>
+        <profile>
+            <id>widgets_showcase_war</id>
+            <build>
+                <plugins>
+                    <!-- GWT Maven Plugin -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>gwt-maven-plugin</artifactId>
+                        <version>2.4.0</version>
+                        <executions>
+                            <execution>
+                                <id>compile</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>compile</goal>
+                                    <goal>test</goal>
+                                    <goal>generateAsync</goal>
+                                </goals>
+                                <configuration>
+                                    <webappDirectory>${webappDirectory}</webappDirectory>
+                                </configuration>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <modules>
+                                <module>com.ericsson.eniq.events.widgets.Widgets</module>
+                            </modules>
+                            <runTarget>ShowcaseExplorer.html</runTarget>
+                        </configuration>
+                    </plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <executions>
+                            <execution>
+
+                                <phase>compile</phase>
+                                <goals>
+                                    <goal>war</goal>
+                                    <goal>exploded</goal>
+                                </goals>
+                                <configuration>
+                                    <warSourceDirectory>web/war</warSourceDirectory>
+                                    <warName>WidgetShowcase</warName>
+                                    <warSourceIncludes>
+                                        **/*.json,
+                                        WEB-INF/classes/**/*,
+                                        resources/**/*,
+                                        WEB-INF/*.xml,
+                                        ShowcaseExplorer.html,
+                                        layout.css,
+                                    </warSourceIncludes>
+                                    <warSourceExcludes>
+                                        **/*.contrib,
+                                        **/*.keep,
+                                        **/*.mkelem,
+                                        **/*.checkin,
+                                        **/*.loading,
+                                        **/*.merge,
+                                        **/*.unloaded,
+                                        **/*.hijacked,
+                                        **/*.checkedout,
+                                        WEB-INF/web.xml
+                                    </warSourceExcludes>
+                                    <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
+                                    <webResources>
+                                    <resource>
+                                        <directory>src/main/webapp</directory>
+                                        <includes>
+                                            <include>**/sun-web.xml</include>
+                                        </includes>
+                                    </resource>
+                                </webResources>
+
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
